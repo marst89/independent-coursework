@@ -15,6 +15,6 @@ for page in sys.stdin:
     oldKey = thisKey
     hits += 1
 
-if oldKey != None:
+if oldKey:
     print oldKey, "\t", hits
 

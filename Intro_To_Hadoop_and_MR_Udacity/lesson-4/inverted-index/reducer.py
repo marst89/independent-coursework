@@ -15,7 +15,7 @@ for line in sys.stdin:
     if oldKey and oldKey != thisKey:
         nodes_list.sort(key=int)
         nodes_ids = ",".join(map(str,nodes_list))
-        print "{0}\t{1}\t{2}".format(oldKey,count, nodes_ids)
+        print "{0}\t{1}\t{2}".format(oldKey, count, nodes_ids)
         oldKey = thisKey
         count = 0
         nodes_list = []
@@ -23,10 +23,10 @@ for line in sys.stdin:
     oldKey = thisKey
     count += 1
     if node_id not in nodes_list:
-    	nodes_list.append(node_id)
+        nodes_list.append(node_id)
 
-if oldKey != None:
+if oldKey:
     nodes_list.sort(key=int)
     nodes_ids = ",".join(map(str,nodes_list))
-    print "{0}\t{1}\t{2}".format(oldKey,count, nodes_ids)
+    print "{0}\t{1}\t{2}".format(oldKey, count, nodes_ids)
 
